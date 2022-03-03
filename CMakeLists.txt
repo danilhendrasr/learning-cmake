@@ -19,3 +19,8 @@ configure_file(TutorialConfig.h.in TutorialConfig.hpp)
 target_include_directories(LearningCMake PUBLIC
                             "${PROJECT_BINARY_DIR}"
                             )
+
+install(TARGETS LearningCMake DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.hpp"
+  DESTINATION include
+  )
